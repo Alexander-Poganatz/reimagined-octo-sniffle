@@ -23,7 +23,7 @@
           "style": "plain",
           "properties": {
             "style": "full",
-            "home_icon": "☕"
+            "home_icon": "🏠"
           },
           "template": "📁 {{ .Path }} ",
           "type": "path"
