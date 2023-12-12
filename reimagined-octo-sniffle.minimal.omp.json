@@ -1,25 +1,12 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
-  "palette": {
-    "black": "#282c34",
-    "red": "#e06c75",
-    "green": "#98c379",
-    "yellow": "#e5c07b",
-    "blue": "#61afef",
-    "magenta": "#c678dd",
-    "cyan": "#56b6c2",
-    "white": "#dcdfe4",
-    "foreground": "#dcdfe4",
-    "background": "#282c34"
-  },
-  "terminal_background": "p:background",
   "blocks": [
     {
       "alignment": "left",
       "newline": true,
       "segments": [
         {
-          "foreground": "p:blue",
+          "foreground": "blue",
           "style": "plain",
           "properties": {
             "style": "full",
@@ -36,7 +23,7 @@
             "fetch_worktree_count": false
           },
           "style": "plain",
-          "template": "🦑({{ if or (.Working.Changed) (.Staging.Changed) (gt .StashCount 0) }}<p:magenta>{{ .HEAD }}</>{{ else }}<p:green>{{ .HEAD }}</>{{ end }}{{ if (gt .Ahead 0)}}<p:cyan>{{ .BranchStatus }}</>{{ end }}{{ if (gt .Behind 0)}}<p:cyan>{{ .BranchStatus }}</>{{ end }}{{ if .Staging.Changed }} <p:green>{{ .Staging.String }}</>{{ end }}{{ if .Working.Changed }} <p:red>{{ .Working.String }}</>{{ end }})",
+          "template": "🦑({{ if or (.Working.Changed) (.Staging.Changed) (gt .StashCount 0) }}<magenta>{{ .HEAD }}</>{{ else }}<green>{{ .HEAD }}</>{{ end }}{{ if (gt .Ahead 0)}}<cyan>{{ .BranchStatus }}</>{{ end }}{{ if (gt .Behind 0)}}<cyan>{{ .BranchStatus }}</>{{ end }}{{ if .Staging.Changed }} <green>{{ .Staging.String }}</>{{ end }}{{ if .Working.Changed }} <red>{{ .Working.String }}</>{{ end }})",
           "type": "git"
         }
       ],
@@ -47,12 +34,12 @@
       "newline": true,
       "segments": [
         {
-          "foreground": "p:foreground",
+          "foreground": "foreground",
           "properties": {
             "always_enabled": true
           },
           "style": "plain",
-          "template": "{{ if ne .Code 0 }}<p:red>({{ .Code }}) </>{{ else }}<p:green>({{ .Code }}) </>{{ end }}> ",
+          "template": "{{ if ne .Code 0 }}<red>({{ .Code }}) </>{{ else }}<green>({{ .Code }}) </>{{ end }}> ",
           "type": "status"
         }
       ],
