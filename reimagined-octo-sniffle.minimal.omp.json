@@ -6,7 +6,7 @@
       "newline": true,
       "segments": [
         {
-          "foreground": "blue",
+          "foreground": "cyan",
           "style": "plain",
           "properties": {
             "style": "full",
